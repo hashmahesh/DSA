@@ -10,3 +10,16 @@ if(r == org):
     print('true')
 else:
     print('false')
+# LEETCODE PROBLEM SOLUTION :
+class Solution(object):
+    def isPalindrome(self, x):
+        #x = int(input())
+        N = 0
+        orig = x
+        if x<0:
+            return False
+        while x>0:
+            l = x%10
+            N = (N*10) + l
+            x = x//10
+        return orig == N
